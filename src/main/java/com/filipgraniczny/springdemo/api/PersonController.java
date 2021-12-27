@@ -3,10 +3,9 @@ package com.filipgraniczny.springdemo.api;
 import com.filipgraniczny.springdemo.model.Person;
 import com.filipgraniczny.springdemo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 // GET - retrieve data from server
 // POST - adding resource to server
@@ -30,6 +29,11 @@ public class PersonController {
     @PostMapping
     public void addPerson(@RequestBody Person person) {
         personService.addPerson(person);
+    }
+
+    @GetMapping
+    public List<Person> getAllPeople() {
+        return personService.getAllPeople();
     }
 
 }

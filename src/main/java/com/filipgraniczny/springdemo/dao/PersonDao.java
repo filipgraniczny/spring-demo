@@ -2,6 +2,7 @@ package com.filipgraniczny.springdemo.dao;
 
 import com.filipgraniczny.springdemo.model.Person;
 
+import java.util.List;
 import java.util.UUID;
 
 // Here, we define the operations allowed for the actual contract for anyone who wishes to implement this interface.
@@ -16,5 +17,6 @@ public interface PersonDao {
         return insertPerson(id, person);
     }
 
+    List<Person> selectAllPeople();
 
 }
