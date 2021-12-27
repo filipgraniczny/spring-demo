@@ -15,3 +15,12 @@ Here, we have 4 subdirectories:
 **The Dependency Inversion Principle** (also known as **_Dependency Injection Principle_**):
 - code should depend upon abstraction
 - we decouple implementations from each other
+
+**Annotations:**
+- `@Repository("%nameOfRepo%")`: tells Spring this class needs to be instantiated as a bean so that we can inject it into other classes (in other words, this class is served as a Repository)
+- `@Service`: tells Spring that this class is a Service. We can inject the repository class into this class
+- `@Autowired`: tells spring that we are autowiring, or injecting, into the interface used by the constructor/method.
+- `@Qualifier("%nameOfRepo%")`: identifies which repository class we want to inject. This is added before the parameter type in the constructor.
+- `@RestController`: enables the class to have methods that respond to REST calls
+- `@PostMapping`: tells Spring that this method will be used with a POST request
+- `@JsonProperty("%propertyName%")`: when put in front of the model class constructor's parameters, it maps an incoming REST json property to that parameter.
