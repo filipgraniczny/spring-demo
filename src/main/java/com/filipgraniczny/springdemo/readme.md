@@ -24,3 +24,5 @@ Here, we have 4 subdirectories:
 - `@RestController`: enables the class to have methods that respond to REST calls
 - `@PostMapping`: tells Spring that this method will be used with a POST request
 - `@JsonProperty("%propertyName%")`: when put in front of the model class constructor's parameters, it maps an incoming REST json property to that parameter.
+- `@RequestBody`: Tells the POST-mapped method to get the selected method parameter from the POST request's body (it is placed before the appropriate parameter)
+- `@RequestMapping("%url%)`: sets the endpoint URL for the controller class (ex: `"api/v1/person"`)
